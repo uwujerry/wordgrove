@@ -23,10 +23,12 @@ assert '<script src=' not in html
 assert 'data:font/ttf;base64,' in html
 out=ROOT.parent
 (out/'Wordgrove.html').write_text(html,encoding='utf-8')
+(out/'index.html').write_text(html,encoding='utf-8')
 with zipfile.ZipFile(out/'Wordgrove-source.zip','w',zipfile.ZIP_DEFLATED) as z:
+    z.write(out/'index.html','index.html')
     for base in [dist,ROOT/'tools']:
         for f in sorted(base.rglob('*')):
             if f.is_file() and f.name not in ['app-v2.js','index-v2.html']:
                 z.write(f,'wordgrove/'+f.relative_to(ROOT).as_posix())
     z.write(ROOT/'README.md','wordgrove/README.md')
-print('Built Wordgrove.html and Wordgrove-source.zip.')
+print('Built root index.html, Wordgrove.html and Wordgrove-source.zip.')

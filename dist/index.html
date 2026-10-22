@@ -4,24 +4,23 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#244e41">
   <meta name="description" content="官方6000字與學測常考字，搭配多義詞例句、間隔複習、英文填空及每日單字本。">
-  <title>Wordgrove｜單字記憶花園</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="features.css">
+  <title>wordlilium｜小百合記憶花園</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="features.css">
 </head>
 <body>
 <div class="app">
   <aside class="sidebar">
-    <a class="brand" href="#overview"><span class="brand-icon">❧</span><span>wordgrove<small>單字記憶花園</small></span></a>
-    <div class="nav-label">你的學習空間</div>
+    <a class="brand" href="#overview"><span class="brand-icon">❧</span><span>wordlilium<small>小百合記憶花園</small></span></a>
+    <div class="nav-label">學習</div>
     <nav aria-label="主要導覽">
       <button data-page="overview" class="active"><span>◫</span>學習總覽</button>
       <button data-page="review"><span>▱</span>今日複習<i id="navDue">0</i></button>
-      <button data-page="library"><span>▤</span>我的單字庫</button>
+      <button data-page="library"><span>▤</span>單字庫</button>
       <button data-page="cloze"><span>Aa</span>例句填空</button>
       <button data-page="notebooks"><span>▧</span>每日單字本</button>
-      <button data-page="progress"><span>↗</span>學習足跡</button>
+      <button data-page="progress"><span>↗</span>學習進度</button>
     </nav>
-    <div class="sidebar-note"><span class="sprout">♧</span><strong>每天一點，記得更久。</strong><p>讓每個單字，都有時間在記憶裡扎根。</p></div>
     <div class="local-label"><span class="status-dot"></span> 進度保存在這個瀏覽器</div>
-    <button class="export-side" id="exportSide">↥ 匯出學習備份</button>
+    <button class="export-side" id="exportSide">↥ 匯出備份</button>
   </aside>
   <main>
     <header><span id="breadcrumb">你的學習空間 / 學習總覽</span><div><span class="date" id="todayDate"></span><span class="avatar">我</span></div></header>
@@ -30,14 +29,14 @@
       <section id="review" class="page"></section><section id="library" class="page"></section>
       <section id="cloze" class="page"></section><section id="notebooks" class="page"></section><section id="progress" class="page"></section>
     </div>
-    <footer>WORDGROVE <span>讓記憶慢慢生長</span></footer>
+    <footer>wordlilium</footer>
   </main>
 </div>
 <dialog id="wordDialog">
   <form id="wordForm">
-    <div class="dialog-head"><div><span class="eyebrow">GROW EVERY MEANING</span><h2>單字的意思與例句</h2></div><button type="button" class="icon-btn" id="closeDialog" aria-label="關閉編輯">×</button></div>
+    <div class="dialog-head"><div><h2>單字的意思與例句</h2></div><button type="button" class="icon-btn" id="closeDialog" aria-label="關閉編輯">×</button></div>
     <label>英文單字或官方詞條<input id="wordInput" required maxlength="180" placeholder="例如 bank"></label>
-    <p class="import-info">每個意思分開填寫，並提供至少兩個不同的英文例句。原有義項的複習進度會保留。</p>
+    <p class="import-info">每個意思請填兩個不同的英文例句。</p>
     <div id="senseFields"></div><button type="button" class="secondary" data-action="add-sense">＋ 增加一個意思</button>
     <p id="formError" role="alert"></p><button class="primary" type="submit">儲存單字與例句</button>
   </form>

@@ -1,4 +1,6 @@
-# Wordgrove｜單字記憶花園 v2
+# wordlilium｜小百合記憶花園 v2
+
+網站上傳入口：輸出資料夾最外層的 `index.html`，或來源壓縮檔根目錄的 `index.html`。此檔已內嵌字庫、字型、樣式與程式，可直接上傳至靜態網站根目錄。原本的 `Wordgrove.html` 保留供既有使用者開啟。
 
 繁體中文介面的英文單字學習工具；英文使用 Times New Roman，中文使用使用者提供的 GENJYUUGOTHIC-BOLD.TTF。
 
