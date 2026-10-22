@@ -1,0 +1,3010 @@
+{
+  "title": "學測近五年重複出現單字160",
+  "analyzedYears": [
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "createdDate": "2026-10-23",
+  "entryCount": 160,
+  "sources": [
+    {
+      "year": 111,
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0m053357638065462325/02-111%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e8%a9%a6%e5%8d%b7.pdf"
+    },
+    {
+      "year": 112,
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0n045359274947649605/02-112%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e8%a9%a6%e5%8d%b7.pdf"
+    },
+    {
+      "year": 113,
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0o051427482769341323/02-113%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e7%a7%91%e5%ae%9a%e7%a8%bf.pdf"
+    },
+    {
+      "year": 114,
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0p056425554473267580/02-114%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e8%a9%a6%e9%a1%8c.pdf"
+    },
+    {
+      "year": 115,
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0q054532302653501476/02-115%e5%ad%b8%e6%b8%ac%e8%8b%b1%e6%96%87%e8%a9%a6%e5%8d%b7.pdf"
+    }
+  ],
+  "method": [
+    "分析民國111至115學年度五份正式學測英文試卷，排除封面，包含題幹、選項、閱讀文章及非選擇題英文內容；不包含解答。",
+    "以英文原字形不分大小寫比對，未合併複數、過去式、分詞等字形。PDF文字擷取與斷行可能造成漏計，因此不是完整的詞形還原詞頻研究。",
+    "只選大考中心111學年度起適用參考詞彙表第3至6級的單一英文詞條，且至少在兩個年度出現。未涵蓋第1至2級基礎字、斜線組合詞條與片語。",
+    "初步符合167詞條，排除passage、paragraph、option三個試卷結構用字，及broke、learned、bound、march四個有明顯同形異義風險的字，留下160詞條。",
+    "優先按出現年度數排序，其次按全卷總出現次數，最後按英文排序。這不是官方常考排名，也不代表字彙題正確答案的考過次數。",
+    "中文釋義為本次另行撰寫的常用義，非大考中心提供的翻譯，不涵蓋每個字的所有義項，也不是逐題的語境翻譯。",
+    "underlying沿用官方詞性欄v.；本字表另含常見形容詞用法的中文義。",
+    "此字表用於個人學習，不保證未來出題；原始試題及參考字表權利屬原權利人。"
+  ],
+  "entries": [
+    {
+      "word": "unique",
+      "pos": "adj./n.",
+      "level": 3,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 2,
+        "112": 1,
+        "113": 1,
+        "114": 2,
+        "115": 5
+      },
+      "yearCount": 5,
+      "total": 11,
+      "rank": 1,
+      "meaningZh": "獨特的；獨一無二的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "refer",
+      "pos": "v.",
+      "level": 4,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "112": 2,
+        "113": 1,
+        "114": 1,
+        "115": 2
+      },
+      "yearCount": 5,
+      "total": 7,
+      "rank": 2,
+      "meaningZh": "提及；參考；指的是",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "research",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "113": 2,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 5,
+      "total": 6,
+      "rank": 3,
+      "meaningZh": "研究；調查",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "variety",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "113": 1,
+        "114": 1,
+        "115": 2
+      },
+      "yearCount": 5,
+      "total": 6,
+      "rank": 4,
+      "meaningZh": "多樣性；種類",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "various",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        111,
+        112,
+        113,
+        115
+      ],
+      "counts": {
+        "111": 2,
+        "112": 1,
+        "113": 3,
+        "115": 2
+      },
+      "yearCount": 4,
+      "total": 8,
+      "rank": 5,
+      "meaningZh": "各種各樣的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "situation",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        112,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "114": 1,
+        "115": 2
+      },
+      "yearCount": 4,
+      "total": 5,
+      "rank": 6,
+      "meaningZh": "情況；處境",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "inspiration",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 4,
+      "total": 4,
+      "rank": 7,
+      "meaningZh": "靈感；鼓舞人心的人事物",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "largely",
+      "pos": "adv.",
+      "level": 4,
+      "years": [
+        112,
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 4,
+      "total": 4,
+      "rank": 8,
+      "meaningZh": "主要地；在很大程度上",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "plastic",
+      "pos": "n./adj.",
+      "level": 3,
+      "years": [
+        112,
+        114,
+        115
+      ],
+      "counts": {
+        "112": 6,
+        "114": 2,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 9,
+      "rank": 9,
+      "meaningZh": "塑膠；塑膠製的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "consumption",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "114": 5,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 7,
+      "rank": 10,
+      "meaningZh": "消耗；消費；食用",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "information",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "113": 3,
+        "114": 3,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 7,
+      "rank": 11,
+      "meaningZh": "資訊；資料",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "route",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        111,
+        112,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "112": 4,
+        "115": 2
+      },
+      "yearCount": 3,
+      "total": 7,
+      "rank": 12,
+      "meaningZh": "路線；途徑；安排運送路線",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "process",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        111,
+        113,
+        114
+      ],
+      "counts": {
+        "111": 2,
+        "113": 2,
+        "114": 2
+      },
+      "yearCount": 3,
+      "total": 6,
+      "rank": 13,
+      "meaningZh": "過程；程序；加工；處理",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "impact",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        111,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "114": 3,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 5,
+      "rank": 14,
+      "meaningZh": "影響；衝擊；對…產生影響",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "physical",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        112,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "115": 3
+      },
+      "yearCount": 3,
+      "total": 5,
+      "rank": 15,
+      "meaningZh": "身體的；物理的；有形的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "product",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        112,
+        113,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "113": 3,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 5,
+      "rank": 16,
+      "meaningZh": "產品；產物",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "furthermore",
+      "pos": "adv.",
+      "level": 4,
+      "years": [
+        112,
+        114,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1,
+        "115": 2
+      },
+      "yearCount": 3,
+      "total": 4,
+      "rank": 17,
+      "meaningZh": "此外；而且",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "innovation",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        111,
+        113,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1,
+        "114": 2
+      },
+      "yearCount": 3,
+      "total": 4,
+      "rank": 18,
+      "meaningZh": "創新；新方法",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "mostly",
+      "pos": "adv.",
+      "level": 3,
+      "years": [
+        111,
+        112,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "113": 2
+      },
+      "yearCount": 3,
+      "total": 4,
+      "rank": 19,
+      "meaningZh": "大多；主要地",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "prevent",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        112,
+        114,
+        115
+      ],
+      "counts": {
+        "112": 2,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 4,
+      "rank": 20,
+      "meaningZh": "預防；阻止",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "reduce",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        111,
+        113,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1,
+        "114": 2
+      },
+      "yearCount": 3,
+      "total": 4,
+      "rank": 21,
+      "meaningZh": "減少；降低",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "site",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        111,
+        113,
+        115
+      ],
+      "counts": {
+        "111": 2,
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 4,
+      "rank": 22,
+      "meaningZh": "地點；場所；設置",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "apart",
+      "pos": "adv.",
+      "level": 3,
+      "years": [
+        111,
+        112,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 23,
+      "meaningZh": "分開地；相隔地",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "behavior",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        113,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 24,
+      "meaningZh": "行為；舉止",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "despite",
+      "pos": "prep.",
+      "level": 4,
+      "years": [
+        112,
+        113,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 25,
+      "meaningZh": "儘管；即使",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "enormous",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        112,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 26,
+      "meaningZh": "巨大的；龐大的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "familiar",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 27,
+      "meaningZh": "熟悉的；常見的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "innovative",
+      "pos": "adj.",
+      "level": 5,
+      "years": [
+        113,
+        114,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 28,
+      "meaningZh": "創新的；採用新方法的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "intimate",
+      "pos": "adj./n.",
+      "level": 4,
+      "years": [
+        111,
+        114,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 29,
+      "meaningZh": "親密的；私人的；知己",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "popularity",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        112,
+        113,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 3,
+      "total": 3,
+      "rank": 30,
+      "meaningZh": "受歡迎程度；普及",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "signal",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 7
+      },
+      "yearCount": 2,
+      "total": 8,
+      "rank": 31,
+      "meaningZh": "信號；示意",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "crew",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 6
+      },
+      "yearCount": 2,
+      "total": 7,
+      "rank": 32,
+      "meaningZh": "全體工作人員；船員；機組人員",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "booth",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 5
+      },
+      "yearCount": 2,
+      "total": 6,
+      "rank": 33,
+      "meaningZh": "攤位；小隔間",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "construction",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 4,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 5,
+      "rank": 34,
+      "meaningZh": "建造；建築工程；結構",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "destination",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 3,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 5,
+      "rank": 35,
+      "meaningZh": "目的地",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "medieval",
+      "pos": "adj.",
+      "level": 6,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 3,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 5,
+      "rank": 36,
+      "meaningZh": "中世紀的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "mystery",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 4
+      },
+      "yearCount": 2,
+      "total": 5,
+      "rank": 37,
+      "meaningZh": "謎；神祕事物",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "percent",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 4,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 5,
+      "rank": 38,
+      "meaningZh": "百分比；百分之…",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "device",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 2,
+        "113": 2
+      },
+      "yearCount": 2,
+      "total": 4,
+      "rank": 39,
+      "meaningZh": "裝置；器具；方法",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "exploration",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 2,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 4,
+      "rank": 40,
+      "meaningZh": "探索；探勘",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "including",
+      "pos": "prep.",
+      "level": 4,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 3
+      },
+      "yearCount": 2,
+      "total": 4,
+      "rank": 41,
+      "meaningZh": "包括；包含",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "injury",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 3
+      },
+      "yearCount": 2,
+      "total": 4,
+      "rank": 42,
+      "meaningZh": "傷害；受傷",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "phenomenon",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 3,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 4,
+      "rank": 43,
+      "meaningZh": "現象",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "risk",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 3,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 4,
+      "rank": 44,
+      "meaningZh": "風險；冒…的危險",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "advanced",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 2,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 45,
+      "meaningZh": "先進的；高階的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "architecture",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 46,
+      "meaningZh": "建築學；建築風格",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "bamboo",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 2,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 47,
+      "meaningZh": "竹；竹子",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "budget",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 48,
+      "meaningZh": "預算；編列預算",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "captivity",
+      "pos": "n.",
+      "level": 6,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 49,
+      "meaningZh": "囚禁；圈養",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "civil",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 2,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 50,
+      "meaningZh": "公民的；民事的；有禮貌的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "communication",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 2,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 51,
+      "meaningZh": "溝通；通訊",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "community",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 2,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 52,
+      "meaningZh": "社區；群體",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "concept",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 53,
+      "meaningZh": "概念；觀念",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "cotton",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 54,
+      "meaningZh": "棉花；棉布",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "demand",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 2,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 55,
+      "meaningZh": "需求；要求",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "designer",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 56,
+      "meaningZh": "設計師",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "evidence",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 57,
+      "meaningZh": "證據；顯示；證明",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "expedition",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 58,
+      "meaningZh": "遠征；考察；探險隊",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "fabric",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 59,
+      "meaningZh": "布料；織物；結構",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "hometown",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 60,
+      "meaningZh": "家鄉",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "industrial",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 2,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 61,
+      "meaningZh": "工業的；產業的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "invention",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 2,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 62,
+      "meaningZh": "發明；發明物",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "issue",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 2,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 63,
+      "meaningZh": "議題；問題；發行；發布",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "jewelry",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 2,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 64,
+      "meaningZh": "珠寶；首飾",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "learning",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 2,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 65,
+      "meaningZh": "學習；學問",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "monthly",
+      "pos": "adj./adv./n.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 66,
+      "meaningZh": "每月的；每月一次地；月刊",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "moreover",
+      "pos": "adv.",
+      "level": 4,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 67,
+      "meaningZh": "此外；而且",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "professional",
+      "pos": "adj./n.",
+      "level": 4,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 2,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 68,
+      "meaningZh": "專業的；職業的；專業人士",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "resist",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 2,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 69,
+      "meaningZh": "抵抗；抵制；忍住",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "ritual",
+      "pos": "n./adj.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 70,
+      "meaningZh": "儀式；慣例；儀式的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "significant",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 2
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 71,
+      "meaningZh": "重要的；顯著的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "trigger",
+      "pos": "n./v.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 2,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 72,
+      "meaningZh": "引發；觸發；誘因；扳機",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "version",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 2,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 3,
+      "rank": 73,
+      "meaningZh": "版本；說法",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "adopt",
+      "pos": "v.",
+      "level": 4,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 74,
+      "meaningZh": "採用；收養",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "agenda",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 75,
+      "meaningZh": "議程；待辦事項",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "aggressive",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 76,
+      "meaningZh": "侵略性的；積極進取的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "airline",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 77,
+      "meaningZh": "航空公司",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "alternative",
+      "pos": "adj./n.",
+      "level": 4,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 78,
+      "meaningZh": "替代的；另一種選擇",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "appeal",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 79,
+      "meaningZh": "吸引力；呼籲；上訴",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "atmosphere",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 80,
+      "meaningZh": "大氣；氣氛",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "awake",
+      "pos": "adj./v.",
+      "level": 3,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 81,
+      "meaningZh": "醒著的；醒來；喚醒",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "bare",
+      "pos": "adj./v.",
+      "level": 3,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 82,
+      "meaningZh": "裸露的；光禿的；使露出",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "barely",
+      "pos": "adv.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 83,
+      "meaningZh": "勉強；幾乎不",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "boost",
+      "pos": "v./n.",
+      "level": 5,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 84,
+      "meaningZh": "促進；提升；增加",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "breed",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 85,
+      "meaningZh": "繁殖；培育；品種",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "career",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 86,
+      "meaningZh": "職業；生涯",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "caution",
+      "pos": "n./v.",
+      "level": 5,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 87,
+      "meaningZh": "謹慎；警告；告誡",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "celebration",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 88,
+      "meaningZh": "慶祝；慶典",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "commerce",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 89,
+      "meaningZh": "商業；貿易",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "compete",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 90,
+      "meaningZh": "競爭；參賽",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "competition",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 91,
+      "meaningZh": "競爭；比賽",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "consensus",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 92,
+      "meaningZh": "共識",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "cooperative",
+      "pos": "adj./n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 93,
+      "meaningZh": "合作的；合作社",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "counter",
+      "pos": "n./v./adj./adv.",
+      "level": 4,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 94,
+      "meaningZh": "櫃檯；反駁；對抗；相反的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "crash",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 95,
+      "meaningZh": "撞擊；墜毀；崩潰",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "credit",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 96,
+      "meaningZh": "信用；功勞；學分；歸功於",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "desire",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 97,
+      "meaningZh": "渴望；願望",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "differ",
+      "pos": "v.",
+      "level": 4,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 98,
+      "meaningZh": "不同；意見相左",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "digital",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 99,
+      "meaningZh": "數位的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "drunk",
+      "pos": "adj./n.",
+      "level": 3,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 100,
+      "meaningZh": "喝醉的；醉漢",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "efficient",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 101,
+      "meaningZh": "有效率的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "emerge",
+      "pos": "v.",
+      "level": 4,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 102,
+      "meaningZh": "出現；浮現",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "emphasis",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 103,
+      "meaningZh": "強調；重點",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "expand",
+      "pos": "v.",
+      "level": 4,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 104,
+      "meaningZh": "擴大；擴展",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "expectation",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 105,
+      "meaningZh": "期待；預期",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "exposure",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 106,
+      "meaningZh": "暴露；接觸；曝光",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "extraordinary",
+      "pos": "adj.",
+      "level": 5,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 107,
+      "meaningZh": "非凡的；不尋常的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "extreme",
+      "pos": "adj./n.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 108,
+      "meaningZh": "極端的；極端；極限",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "fantastic",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 109,
+      "meaningZh": "極好的；難以置信的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "fatal",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 110,
+      "meaningZh": "致命的；造成重大失敗的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "fatigue",
+      "pos": "n./v.",
+      "level": 5,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 111,
+      "meaningZh": "疲勞；使疲倦",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "flee",
+      "pos": "v.",
+      "level": 4,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 112,
+      "meaningZh": "逃離；逃跑",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "genetic",
+      "pos": "adj.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 113,
+      "meaningZh": "基因的；遺傳的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "goods",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 114,
+      "meaningZh": "商品；貨物",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "harsh",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 115,
+      "meaningZh": "嚴厲的；惡劣的；刺耳的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "highlight",
+      "pos": "v./n.",
+      "level": 5,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 116,
+      "meaningZh": "強調；凸顯；最精彩的部分",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "incredible",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 117,
+      "meaningZh": "令人難以置信的；極好的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "initiative",
+      "pos": "n./adj.",
+      "level": 5,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 118,
+      "meaningZh": "主動性；倡議；初步措施",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "integrity",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 119,
+      "meaningZh": "正直；誠信；完整性",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "interaction",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 120,
+      "meaningZh": "互動；相互作用",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "justify",
+      "pos": "v.",
+      "level": 5,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 121,
+      "meaningZh": "證明…合理；為…辯護",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "locate",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 122,
+      "meaningZh": "找出位置；設置於",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "meanwhile",
+      "pos": "n./adv.",
+      "level": 3,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 123,
+      "meaningZh": "同時；在此期間",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "microscope",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 124,
+      "meaningZh": "顯微鏡",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "moderate",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 125,
+      "meaningZh": "適度的；溫和的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "multiple",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 126,
+      "meaningZh": "多個的；多重的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "navigate",
+      "pos": "v.",
+      "level": 6,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 127,
+      "meaningZh": "導航；航行；引導通過",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "normal",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 128,
+      "meaningZh": "正常的；一般的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "observation",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 129,
+      "meaningZh": "觀察；觀察結果",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "offering",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 130,
+      "meaningZh": "提供的事物；祭品",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "perspective",
+      "pos": "n./adj.",
+      "level": 5,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 131,
+      "meaningZh": "觀點；角度；透視的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "plenty",
+      "pos": "pron./n./adv.",
+      "level": 3,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 132,
+      "meaningZh": "大量；充足",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "polar",
+      "pos": "adj.",
+      "level": 6,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 133,
+      "meaningZh": "極地的；兩極的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "political",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 134,
+      "meaningZh": "政治的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "potential",
+      "pos": "adj./n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 135,
+      "meaningZh": "潛在的；潛力",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "presence",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 136,
+      "meaningZh": "出席；存在；在場",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "recall",
+      "pos": "v./n.",
+      "level": 4,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 137,
+      "meaningZh": "回想；召回；記憶力",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "recreation",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 138,
+      "meaningZh": "休閒活動；娛樂",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "reference",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 139,
+      "meaningZh": "參考；提及；推薦信",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "renowned",
+      "pos": "adj.",
+      "level": 6,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 140,
+      "meaningZh": "著名的；享有盛名的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "resort",
+      "pos": "n./v.",
+      "level": 5,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 141,
+      "meaningZh": "度假勝地；求助於；訴諸",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "resource",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 142,
+      "meaningZh": "資源；可運用的辦法",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "revolution",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        113,
+        114
+      ],
+      "counts": {
+        "113": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 143,
+      "meaningZh": "革命；重大變革",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "roughly",
+      "pos": "adv.",
+      "level": 3,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 144,
+      "meaningZh": "大約；粗略地；粗暴地",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "sensation",
+      "pos": "n.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 145,
+      "meaningZh": "感覺；轟動一時的人事物",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "serial",
+      "pos": "adj.",
+      "level": 6,
+      "years": [
+        111,
+        114
+      ],
+      "counts": {
+        "111": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 146,
+      "meaningZh": "連續的；連載的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "severe",
+      "pos": "adj.",
+      "level": 4,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 147,
+      "meaningZh": "嚴重的；嚴厲的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "sink",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 148,
+      "meaningZh": "下沉；使下沉；水槽",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "slender",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 149,
+      "meaningZh": "苗條的；纖細的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "specific",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 150,
+      "meaningZh": "特定的；具體的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "status",
+      "pos": "n.",
+      "level": 4,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 151,
+      "meaningZh": "地位；狀態",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "sticky",
+      "pos": "adj.",
+      "level": 3,
+      "years": [
+        112,
+        113
+      ],
+      "counts": {
+        "112": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 152,
+      "meaningZh": "黏的；棘手的",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "stimulate",
+      "pos": "v.",
+      "level": 5,
+      "years": [
+        111,
+        112
+      ],
+      "counts": {
+        "111": 1,
+        "112": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 153,
+      "meaningZh": "刺激；促進；激發",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "structure",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 154,
+      "meaningZh": "結構；架構",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "talent",
+      "pos": "n.",
+      "level": 3,
+      "years": [
+        111,
+        113
+      ],
+      "counts": {
+        "111": 1,
+        "113": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 155,
+      "meaningZh": "天分；人才",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "tend",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        112,
+        114
+      ],
+      "counts": {
+        "112": 1,
+        "114": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 156,
+      "meaningZh": "傾向於；照料",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "underlying",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        113,
+        115
+      ],
+      "counts": {
+        "113": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 157,
+      "meaningZh": "潛在的；根本的；位於…之下",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "vary",
+      "pos": "v.",
+      "level": 3,
+      "years": [
+        114,
+        115
+      ],
+      "counts": {
+        "114": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 158,
+      "meaningZh": "變化；各不相同",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "voyage",
+      "pos": "n./v.",
+      "level": 4,
+      "years": [
+        112,
+        115
+      ],
+      "counts": {
+        "112": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 159,
+      "meaningZh": "航行；航程",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    },
+    {
+      "word": "zone",
+      "pos": "n./v.",
+      "level": 3,
+      "years": [
+        111,
+        115
+      ],
+      "counts": {
+        "111": 1,
+        "115": 1
+      },
+      "yearCount": 2,
+      "total": 2,
+      "rank": 160,
+      "meaningZh": "區域；劃分區域",
+      "countMethod": "exact case-insensitive token; no inflection merging"
+    }
+  ]
+}
