@@ -1,20 +1,20 @@
 # wordlilium｜小百合記憶花園 v2
 
-網站上傳入口：輸出資料夾最外層的 `index.html`，或來源壓縮檔根目錄的 `index.html`。此檔已內嵌字庫、字型、樣式與程式，可直接上傳至靜態網站根目錄。原本的 `Wordgrove.html` 保留供既有使用者開啟。
+網站上傳入口：工作資料夾根目錄（與 `outputs` 同層）的 `index.html`，或來源壓縮檔根目錄的 `index.html`。此入口以相對路徑載入 `outputs/wordgrove/` 中的程式與樣式；上傳時請保留這個資料夾結構。來源壓縮檔已包含對應結構。原本的 `Wordgrove.html` 保留供既有使用者開啟。
 
 繁體中文介面的英文單字學習工具；英文使用 Times New Roman，中文使用使用者提供的 GENJYUUGOTHIC-BOLD.TTF。
 
 ## 開啟
 
-直接用瀏覽器開啟同一輸出資料夾中的 `Wordgrove.html`（字庫、程式及字型均已內嵌），或開啟本專案 `dist/index.html`。所有執行所需檔案皆位於 `dist`，主要功能不需要外部資料 API。
+直接用瀏覽器開啟同一輸出資料夾中的 `Wordgrove.html`（字庫、程式及字型均已內嵌），或開啟本專案 `index.html`。程式、樣式與字型位於專案根目錄，來源說明位於 `dist/data`，主要功能不需要外部資料 API。
 
 VS Code 專案來源：
 
-- `dist/index.html`：頁面與對話框。
-- `dist/style.css`、`dist/features.css`：字型、版面與功能樣式。
-- `dist/app.js`：六個頁面與互動流程。
-- `dist/model.js`：進度資料、排程、填空與備份合併規則。
-- `dist/catalog.js`、`dist/data/wordgrove-catalog.json`：內建字庫。
+- `index.html`：頁面與對話框。
+- `style.css`、`features.css`：字型、版面與功能樣式。
+- `app.js`：六個頁面與互動流程。
+- `model.js`：進度資料、排程、填空與備份合併規則。
+- `catalog.js`、`dist/data/wordgrove-catalog.json`：內建字庫。
 - `tools/package.py`：以 Python 標準庫產生單檔 HTML 與來源 ZIP。
 
 ## 兩個分類，避免重複

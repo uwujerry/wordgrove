@@ -3,7 +3,7 @@ from pathlib import Path
 import base64,re,zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-dist=ROOT/'dist'
+dist=ROOT
 html=(dist/'index.html').read_text(encoding='utf-8')
 for css_name in ['style.css','features.css']:
     css=(dist/css_name).read_text(encoding='utf-8')
@@ -23,12 +23,18 @@ assert '<script src=' not in html
 assert 'data:font/ttf;base64,' in html
 out=ROOT.parent
 (out/'Wordgrove.html').write_text(html,encoding='utf-8')
-(out/'index.html').write_text(html,encoding='utf-8')
+entry=out.parent/'index.html'
+linked=(dist/'index.html').read_text(encoding='utf-8')
+prefix=ROOT.relative_to(entry.parent).as_posix()+'/'
+for name in ['style.css','features.css','catalog.js','model.js','app.js']:
+    linked=linked.replace('href="'+name+'"','href="'+prefix+name+'"').replace('src="'+name+'"','src="'+prefix+name+'"')
+entry.write_text(linked,encoding='utf-8')
 with zipfile.ZipFile(out/'Wordgrove-source.zip','w',zipfile.ZIP_DEFLATED) as z:
-    z.write(out/'index.html','index.html')
-    for base in [dist,ROOT/'tools']:
-        for f in sorted(base.rglob('*')):
-            if f.is_file() and f.name not in ['app-v2.js','index-v2.html']:
-                z.write(f,'wordgrove/'+f.relative_to(ROOT).as_posix())
-    z.write(ROOT/'README.md','wordgrove/README.md')
+    z.write(entry,'index.html')
+    # Keep archive paths identical to the root entry's relative references.
+    assets=[f for f in ROOT.iterdir() if f.is_file()]
+    for folder in [ROOT/'dist'/'data',ROOT/'tools']:
+        assets.extend(f for f in folder.rglob('*') if f.is_file() and '__pycache__' not in f.parts)
+    for f in sorted(assets):
+        z.write(f,prefix+f.relative_to(ROOT).as_posix())
 print('Built root index.html, Wordgrove.html and Wordgrove-source.zip.')
