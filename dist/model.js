@@ -115,6 +115,16 @@
     if(answers.length!==1)return null;
     return {text:text.replace(regex,'________'),answer:matches[0][0],normalizedAnswer:answers[0],original:text,translation:example.zh||'',wordId:word.id,senseId:sense.id};
   }
+  function evaluateCloze(question,input){
+    const answer=norm(question.answer),submitted=norm(input);
+    if(submitted===answer)return {correct:true,kind:'correct'};
+    const sense=question.sense||{};
+    // Use this sense's recorded inflections; shared spelling or suffixes alone
+    // cannot establish that two words are forms of the same verb.
+    const forms=new Set([sense.term||question.word?.word,...(sense.forms||[])].map(norm).filter(f=>f&&f!=='-'));
+    const verb=/^(verb|auxiliary|auxiliary verb)$/i.test(sense.pos||'');
+    return {correct:false,kind:verb&&submitted&&forms.has(submitted)&&forms.has(answer)?'verb-form':'incorrect'};
+  }
   function questions(words){const pool=[];for(const w of words)for(const s of w.senses)for(const e of s.examples){const q=makeCloze(w,s,e);if(q)pool.push({...q,sense:s,word:w});}return pool;}
   function dueUnits(state,words,now=Date.now()){const units=[];for(const w of words)for(const s of w.senses){const p=getProgress(state,w.id,s.id);if(p.stage>=0&&p.due<=now)units.push({word:w,sense:s,due:p.due});}return units.sort((a,b)=>a.due-b.due);}
   function newUnits(state,words,limit=10){
@@ -123,7 +133,7 @@
     const picked=unfinished.slice(0,Math.max(1,Math.min(50,limit)));
     return picked.flatMap(w=>w.senses.filter(s=>getProgress(state,w.id,s.id).stage<0).map(s=>({word:w,sense:s})));
   }
-  const api={DAY,intervals,norm,dateKey,empty,fresh,unitKey,getProgress,schedule,rate,wordState,allWords,lookup,validSense,validWord,validState,validLegacy,importLegacy,mergeBackup,notebooks,makeCloze,questions,dueUnits,newUnits,dedupLogs};
+  const api={DAY,intervals,norm,dateKey,empty,fresh,unitKey,getProgress,schedule,rate,wordState,allWords,lookup,validSense,validWord,validState,validLegacy,importLegacy,mergeBackup,notebooks,makeCloze,evaluateCloze,questions,dueUnits,newUnits,dedupLogs};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.WGCore=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
