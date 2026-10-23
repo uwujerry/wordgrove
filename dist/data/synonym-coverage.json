@@ -1,0 +1,17 @@
+{
+  "source": "Open English WordNet 2025",
+  "url": "https://en-word.net/downloads",
+  "license": "CC BY 4.0",
+  "queriedWords": 6008,
+  "stats": {
+    "found": 5394,
+    "groups": 19481,
+    "links": 47719,
+    "no_synonyms": 548,
+    "no_entry": 66
+  },
+  "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+  "notice": "Open English WordNet 2025, Open English WordNet Community; CC BY 4.0. Synsets and derivational relations extracted from the official WN-LMF release. English definitions retained; Chinese glosses from the existing dictionary may describe another sense. Synonyms are not guaranteed interchangeable in sentences. https://en-word.net/downloads ; https://creativecommons.org/licenses/by/4.0/",
+  "highFrequencyWords": 710,
+  "frequencyScope": "111–115 official GSAT papers, >=2 years and >=3 recorded-form occurrences; excludes common function words; includes questions, options and passages."
+}

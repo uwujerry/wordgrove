@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<title>Lilivm 小百合花</title>
+<rect width="64" height="64" rx="16" fill="#244e41"/>
+<path d="M33 37Q33 48 29 58M31 50Q17 51 15 42Q27 41 31 50M32 46Q43 45 47 36Q34 36 32 46" fill="#8eb29a" stroke="#8eb29a" stroke-width="2" stroke-linecap="round"/>
+<g fill="#fff9ee" stroke="#e5d8cd" stroke-width="1.1" stroke-linejoin="round">
+<path d="M32 33Q17 24 20 8Q32 12 34 29Z"/>
+<path d="M32 33Q35 14 47 10Q51 25 35 34Z"/>
+<path d="M32 33Q44 22 58 27Q52 41 35 37Z"/>
+<path d="M32 33Q48 38 47 51Q32 49 30 36Z"/>
+<path d="M32 33Q24 47 10 43Q14 29 29 30Z"/>
+<path d="M32 33Q16 29 8 18Q24 14 33 30Z"/>
+</g>
+<g stroke="#cfaa72" stroke-width="1.6" stroke-linecap="round"><path d="M32 33L26 22M32 33L39 23M32 33L44 32"/></g>
+<g fill="#d78a68"><circle cx="26" cy="22" r="2.3"/><circle cx="39" cy="23" r="2.3"/><circle cx="44" cy="32" r="2.3"/></g><circle cx="32" cy="33" r="3" fill="#c9ae68"/>
+</svg>

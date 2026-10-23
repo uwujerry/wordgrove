@@ -7,6 +7,10 @@ dist=ROOT
 html=(dist/'index.html').read_text(encoding='utf-8')
 for css_name in ['style.css','features.css']:
     css=(dist/css_name).read_text(encoding='utf-8')
+    css=css.replace('url("./home-sky.svg")','url("data:image/svg+xml;base64,'+base64.b64encode((dist/'home-sky.svg').read_bytes()).decode('ascii')+'")')
+    for cover in sorted(dist.glob('cover-*.*')):
+        mime={'.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg'}[cover.suffix.lower()]
+        css=css.replace('url("./'+cover.name+'")','url("data:'+mime+';base64,'+base64.b64encode(cover.read_bytes()).decode('ascii')+'")')
     def embed_font(match):
         name=match.group(1)
         asset=dist/name.removeprefix('./')
@@ -14,11 +18,14 @@ for css_name in ['style.css','features.css']:
         return 'url("data:'+mime+';base64,'+base64.b64encode(asset.read_bytes()).decode('ascii')+'")'
     css=re.sub(r'url\("(\.?/?[^":]+\.(?:TTF|ttf|woff2))"\)',embed_font,css)
     html=html.replace(f'<link rel="stylesheet" href="{css_name}">','<style>'+css+'</style>')
-for script in ['catalog.js','model.js','app.js']:
+for script in ['catalog.js','relations.js','model.js','app.js']:
     code=(dist/script).read_text(encoding='utf-8')
     # Keep source code inside one script element even if content contains HTML.
     code=re.sub(r'</script',r'<\/script',code,flags=re.IGNORECASE)
     html=html.replace(f'<script src="{script}"></script>','<script>'+code+'</script>')
+html=html.replace('src="night-mode-icon.png"','src="data:image/png;base64,'+base64.b64encode((dist/'night-mode-icon.png').read_bytes()).decode('ascii')+'"')
+html=html.replace('src="rope-character.png"','src="data:image/png;base64,'+base64.b64encode((dist/'rope-character.png').read_bytes()).decode('ascii')+'"')
+html=html.replace('href="lily-icon.svg"','href="data:image/svg+xml;base64,'+base64.b64encode((dist/'lily-icon.svg').read_bytes()).decode('ascii')+'"')
 assert '<script src=' not in html
 assert 'data:font/ttf;base64,' in html
 out=ROOT.parent
@@ -26,7 +33,7 @@ out=ROOT.parent
 entry=out.parent/'index.html'
 linked=(dist/'index.html').read_text(encoding='utf-8')
 prefix=ROOT.relative_to(entry.parent).as_posix()+'/'
-for name in ['style.css','features.css','catalog.js','model.js','app.js']:
+for name in ['style.css','features.css','catalog.js','relations.js','model.js','app.js','night-mode-icon.png','lily-icon.svg','rope-character.png']:
     linked=linked.replace('href="'+name+'"','href="'+prefix+name+'"').replace('src="'+name+'"','src="'+prefix+name+'"')
 entry.write_text(linked,encoding='utf-8')
 with zipfile.ZipFile(out/'Wordgrove-source.zip','w',zipfile.ZIP_DEFLATED) as z:

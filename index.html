@@ -4,13 +4,26 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#244e41">
   <meta name="description" content="官方6000字與學測常考字，搭配多義詞例句、間隔複習、英文填空及每日單字本。">
-  <title>wordlilium｜小百合記憶花園</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="features.css">
+  <title>Lilivm</title>
+  <link rel="icon" type="image/svg+xml" href="lily-icon.svg">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="features.css">
 </head>
-<body>
+<body data-view="overview">
+<button id="backToTop" class="back-to-top" type="button" data-action="back-to-top" data-visible="false" aria-label="拉繩回到頁面頂端" aria-hidden="true" title="拉一下，回到頂端" tabindex="-1" disabled>
+  <img class="pull-character" src="rope-character.png" alt="" width="1290" height="1219" draggable="false">
+  <svg viewBox="0 200 48 70" aria-hidden="true" focusable="false">
+    <path class="pull-rope-shadow" d="M25 0v210"/>
+    <path class="pull-rope" d="M24 0v210"/>
+    <path class="pull-rope-weave" d="m21 8 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5-6 5 6 5 -6 5 6 5 -6 5 6 5 -6 5 6 5 -6 5 6 5 -6 5 6 5 -6 5 6 5"/>
+    <path class="pull-knot" d="M18 206h12v10H18z"/>
+    <ellipse class="pull-ring" cx="24" cy="235" rx="14" ry="19"/>
+    <path class="pull-arrow" d="m18 237 6-6 6 6m-6-5v11"/>
+  </svg>
+</button>
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="切換深夜模式" aria-pressed="false" title="切換深夜模式"><img src="night-mode-icon.png" alt="" width="60" height="60"><span class="theme-symbol" aria-hidden="true">☾</span></button>
 <div class="app">
   <aside class="sidebar">
-    <a class="brand" href="#overview"><span class="brand-icon">❧</span><span>wordlilium<small>小百合記憶花園</small></span></a>
-    <div class="nav-label">學習</div>
+    <a class="brand" href="#overview"><span>Lilivm</span></a>
     <nav aria-label="主要導覽">
       <button data-page="overview" class="active"><span>◫</span>學習總覽</button>
       <button data-page="review"><span>▱</span>今日複習<i id="navDue">0</i></button>
@@ -18,30 +31,33 @@
       <button data-page="cloze"><span>Aa</span>例句填空</button>
       <button data-page="notebooks"><span>▧</span>每日單字本</button>
       <button data-page="progress"><span>↗</span>學習進度</button>
+      <button data-page="about"><span>❀</span>關於本站</button>
     </nav>
-    <div class="local-label"><span class="status-dot"></span> 進度保存在這個瀏覽器</div>
-    <button class="export-side" id="exportSide">↥ 匯出備份</button>
   </aside>
   <main>
     <header><span id="breadcrumb">你的學習空間 / 學習總覽</span><div><span class="date" id="todayDate"></span><span class="avatar">我</span></div></header>
     <div class="content">
       <section id="overview" class="page active"><div class="empty">正在準備字庫…</div></section>
       <section id="review" class="page"></section><section id="library" class="page"></section>
-      <section id="cloze" class="page"></section><section id="notebooks" class="page"></section><section id="progress" class="page"></section>
+      <section id="cloze" class="page"></section><section id="notebooks" class="page"></section><section id="progress" class="page"></section><section id="about" class="page"></section>
     </div>
-    <footer>wordlilium</footer>
+    <footer class="site-footer" aria-label="網站資訊">
+      <div class="footer-credit"><button type="button" data-action="sources">字庫來源與授權</button><span class="footer-divider" aria-hidden="true">|</span><span>© 2026 <strong>Lilivm</strong></span></div>
+      <div class="footer-tools"><span class="local-label"><span class="status-dot"></span> 進度保存在這個瀏覽器</span><span class="footer-divider" aria-hidden="true">|</span><button type="button" class="export-side" id="exportSide">匯出備份 ↗</button><span class="footer-flower" aria-hidden="true">❀</span></div>
+    </footer>
   </main>
 </div>
 <dialog id="wordDialog">
   <form id="wordForm">
     <div class="dialog-head"><div><h2>單字的意思與例句</h2></div><button type="button" class="icon-btn" id="closeDialog" aria-label="關閉編輯">×</button></div>
     <label>英文單字或官方詞條<input id="wordInput" required maxlength="180" placeholder="例如 bank"></label>
-    <p class="import-info">每個意思請填兩個不同的英文例句。</p>
+    <p class="import-info">每個意思請填兩組中英文例句。</p>
     <div id="senseFields"></div><button type="button" class="secondary" data-action="add-sense">＋ 增加一個意思</button>
     <p id="formError" role="alert"></p><button class="primary" type="submit">儲存單字與例句</button>
   </form>
 </dialog>
+<dialog id="relatedDialog" aria-label="同義字與易混淆字清單"><div id="relatedContent"></div></dialog>
 <dialog id="detailDialog"><div id="detailContent"></div></dialog>
 <input type="file" accept="application/json,.json" id="importFile" hidden><div id="toast" role="status"></div>
-<script src="catalog.js"></script><script src="model.js"></script><script src="app.js"></script>
+<script src="catalog.js"></script><script src="relations.js"></script><script src="model.js"></script><script src="app.js"></script>
 </body></html>
