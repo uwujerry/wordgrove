@@ -4,7 +4,7 @@
   const DAY=86400000, intervals=[10/1440,1,3,7,21,60];
   const norm=s=>String(s||'').normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
   const dateKey=t=>{const d=new Date(t);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
-  const empty=()=>({version:2,progress:{},logs:[],customWords:[],overrides:{},hidden:[],settings:{dailyGoal:10},migrationDone:false});
+  const empty=()=>({version:2,progress:{},logs:[],notes:[],customWords:[],overrides:{},hidden:[],settings:{dailyGoal:10},migrationDone:false});
   const fresh=()=>({stage:-1,due:0,reviews:0,last:0});
   const unitKey=(wid,sid)=>`${wid}::${sid}`;
   const getProgress=(state,wid,sid)=>state.progress[unitKey(wid,sid)]||fresh();
@@ -62,11 +62,12 @@
   const safeKey=k=>typeof k==='string'&&k.length>0&&k.length<500&&!['__proto__','constructor','prototype'].includes(k);
   const safeLink=x=>!x||(typeof x==='string'&&/^https?:\/\//i.test(x));
   function validSense(s){return s&&safeKey(s.id)&&typeof s.zh==='string'&&s.zh.trim().length>0&&s.zh.length<=2000&&(!s.term||typeof s.term==='string')&&(!s.pos||typeof s.pos==='string')&&(!s.forms||Array.isArray(s.forms)&&s.forms.every(f=>typeof f==='string'))&&safeLink(s.sourceUrl)&&Array.isArray(s.examples)&&s.examples.length<=30&&s.examples.every(e=>e&&typeof e.en==='string'&&e.en.length<=4000&&(!e.zh||typeof e.zh==='string'));}
-  function validWord(w){return w&&safeKey(w.id)&&typeof w.word==='string'&&w.word.trim().length>0&&w.word.length<=180&&Array.isArray(w.categories)&&w.categories.every(c=>['ceec','gsat','highfreq','custom'].includes(c))&&(!w.forms||Array.isArray(w.forms)&&w.forms.every(f=>typeof f==='string'))&&Array.isArray(w.senses)&&w.senses.length>0&&w.senses.length<=100&&w.senses.every(validSense)&&new Set(w.senses.map(s=>s.id)).size===w.senses.length;}
+  function validWord(w){return w&&safeKey(w.id)&&typeof w.word==='string'&&w.word.trim().length>0&&w.word.length<=180&&Array.isArray(w.categories)&&w.categories.every(c=>['ceec','gsat','highfreq','toeic','custom'].includes(c))&&(!w.forms||Array.isArray(w.forms)&&w.forms.every(f=>typeof f==='string'))&&Array.isArray(w.senses)&&w.senses.length>0&&w.senses.length<=100&&w.senses.every(validSense)&&new Set(w.senses.map(s=>s.id)).size===w.senses.length;}
   function validProgress(p){return p&&Number.isInteger(p.stage)&&p.stage>=-1&&p.stage<=5&&Number.isFinite(p.due)&&p.due>=0&&Number.isInteger(p.reviews)&&p.reviews>=0&&Number.isFinite(p.last)&&p.last>=0;}
   function validLog(l){return l&&typeof l.id==='string'&&Number.isFinite(l.time)&&l.time>=0&&['again','hard','good','easy'].includes(l.rating);}
   const plain=o=>o&&typeof o==='object'&&!Array.isArray(o);
-  function validState(s){return plain(s)&&s.version===2&&plain(s.progress)&&Object.keys(s.progress).length<=200000&&Object.keys(s.progress).every(safeKey)&&Object.values(s.progress).every(validProgress)&&Array.isArray(s.logs)&&s.logs.every(validLog)&&Array.isArray(s.customWords)&&s.customWords.length<=10000&&s.customWords.every(validWord)&&new Set(s.customWords.map(w=>w.id)).size===s.customWords.length&&plain(s.overrides)&&Object.keys(s.overrides).every(safeKey)&&Object.values(s.overrides).every(o=>plain(o)&&(!o.word||typeof o.word==='string')&&(!o.senses||Array.isArray(o.senses)&&o.senses.length>0&&o.senses.every(validSense)))&&Array.isArray(s.hidden)&&s.hidden.every(safeKey)&&(!s.settings||plain(s.settings)&&(!s.settings.dailyGoal||Number.isInteger(s.settings.dailyGoal)&&s.settings.dailyGoal>=1&&s.settings.dailyGoal<=50));}
+  function validNote(n){return plain(n)&&safeKey(n.id)&&typeof n.title==='string'&&n.title.length<=200&&typeof n.body==='string'&&n.body.length<=20000&&(!n.wordId||safeKey(n.wordId))&&Number.isFinite(n.createdAt)&&n.createdAt>=0&&Number.isFinite(n.updatedAt)&&n.updatedAt>=n.createdAt&&(!n.deletedAt||Number.isFinite(n.deletedAt)&&n.deletedAt>=n.updatedAt);}
+  function validState(s){return plain(s)&&s.version===2&&(!s.notes||Array.isArray(s.notes)&&s.notes.length<=10000&&s.notes.every(validNote)&&new Set(s.notes.map(n=>n.id)).size===s.notes.length)&&plain(s.progress)&&Object.keys(s.progress).length<=200000&&Object.keys(s.progress).every(safeKey)&&Object.values(s.progress).every(validProgress)&&Array.isArray(s.logs)&&s.logs.every(validLog)&&Array.isArray(s.customWords)&&s.customWords.length<=10000&&s.customWords.every(validWord)&&new Set(s.customWords.map(w=>w.id)).size===s.customWords.length&&plain(s.overrides)&&Object.keys(s.overrides).every(safeKey)&&Object.values(s.overrides).every(o=>plain(o)&&(!o.word||typeof o.word==='string')&&(!o.senses||Array.isArray(o.senses)&&o.senses.length>0&&o.senses.every(validSense)))&&Array.isArray(s.hidden)&&s.hidden.every(safeKey)&&(!s.settings||plain(s.settings)&&(!s.settings.dailyGoal||Number.isInteger(s.settings.dailyGoal)&&s.settings.dailyGoal>=1&&s.settings.dailyGoal<=50));}
   function validLegacy(d){return d&&Array.isArray(d.words)&&d.words.length<=10000&&Array.isArray(d.logs)&&d.logs.every(validLog)&&d.words.every(w=>w&&typeof w.id==='string'&&typeof w.word==='string'&&typeof w.meaning==='string'&&w.meaning.trim()&&typeof w.example==='string'&&validProgress(w));}
   function importLegacy(state,legacy,catalog){
     if(!validLegacy(legacy))throw Error('備份資料格式不正確');
@@ -104,6 +105,13 @@
     for(const [id,ov] of Object.entries(incoming.overrides))if(!state.overrides[id])state.overrides[id]=ov;
     state.logs.push(...incoming.logs.map(l=>idMap.has(l.id)?{...l,id:idMap.get(l.id),senseId:all.byId.get(idMap.get(l.id))?.senses[0]?.id||l.senseId}:l));
     state.hidden=[...new Set([...state.hidden,...incoming.hidden])];
+    const noteMap=new Map((state.notes||[]).map(n=>[n.id,n]));
+    for(const note of incoming.notes||[]){
+      const candidate={...note,wordId:idMap.get(note.wordId)||note.wordId||''},previous=noteMap.get(note.id);
+      const time=n=>Math.max(n.updatedAt,n.deletedAt||0);
+      if(!previous||time(candidate)>time(previous)||(time(candidate)===time(previous)&&candidate.deletedAt&&!previous.deletedAt))noteMap.set(note.id,candidate);
+    }
+    state.notes=[...noteMap.values()];
     state.settings={...state.settings,...incoming.settings};
     dedupLogs(state);return state;
   }
@@ -176,6 +184,77 @@
       }
     }
     return {correct:false,kind:near?'spelling':'incorrect'};
+  }
+  const feedbackPOS={noun:'名詞',verb:'動詞',adj:'形容詞',adv:'副詞',prep:'介系詞',pron:'代名詞',conj:'連接詞',det:'限定詞',auxiliary:'助動詞'};
+  // Curated comparisons supplement the local dictionary; they do not grade all possible rewrites.
+  const usageComparisons=[
+    {terms:['safe','safety'],definitions:{safe:['adj','安全的；沒有危險的'],safety:['noun','安全；免於危險的狀態']},hint:'留意「安全的」和「安全這種狀態」的詞性差別。',notes:['safe 常作形容詞「安全的」；safety 是名詞「安全」。safe 也可作名詞，但意思是「保險箱」，不能因此當成 safety。','例如 stay safe 用形容詞描述狀態；for your safety 用名詞表示目的。'],examples:{safe:['Please stay safe on your trip.','旅途中請注意安全。'],safety:['Please wear a helmet for your safety.','為了你的安全，請戴安全帽。']}},
+    {terms:['safety','security'],definitions:{safety:['noun','安全；免於危險或傷害'],security:['noun','安全保障；保全；防護措施']},hint:'兩者都和安全有關；留意本句是避免傷害，還是防範威脅、失竊或未授權存取。',notes:['safety 常談避免事故、傷害或危險；security 常談防盜、保全與防範威脅，例如 road safety、airport security。','兩者在部分語境會重疊，不能只看中文「安全」就認定可完全互換。']},
+    {terms:['big','large','huge'],definitions:{big:['adj','大的；也可形容重要或影響大'],large:['adj','尺寸、數量或規模大的'],huge:['adj','非常大的；巨大的']},hint:'這個字有近義用法；留意大小的程度、慣用搭配，以及本題要回想的原句用字。',notes:['big 和 large 都能形容尺寸或規模，部分語境可互換；big 也常形容重要性，例如 a big decision。','huge 通常比單純的 big 或 large 語氣更強，表示「非常大」。','這是原句回想題：近義字未被計為原句答案，不代表你的整句一定不合文法。'],examples:{big:['Buying a home is a big decision.','買房是一項重大決定。'],large:['They ordered a large quantity of paper.','他們訂購了大量紙張。'],huge:['The new factory is huge.','新工廠非常大。']}},
+    {terms:['economic','economical'],definitions:{economic:['adj','經濟的；與經濟活動有關的'],economical:['adj','節省金錢、資源或時間的']},hint:'留意本句是在談經濟活動，還是節省開支與資源。',notes:['economic 著重經濟活動，例如 economic growth；economical 著重節省，例如 an economical car。','兩者都是形容詞，差異主要在意思與搭配，不能只靠詞性判斷。']},
+    {terms:['affect','effect'],definitions:{affect:['verb','影響'],effect:['noun','效果；影響；結果']},hint:'留意「影響某事」這個動作，和「產生的影響／效果」這個名詞。',notes:['常見用法是 affect 作動詞「影響」，effect 作名詞「影響、效果」，例如 affect sales、have an effect on sales。','effect 也能作動詞「促成、實現」，affect 在心理學也有名詞用法；這些用法不能直接套進每個句子。']},
+    {terms:['advice','advise'],definitions:{advice:['noun','建議；忠告（通常不可數）'],advise:['verb','建議；勸告']},hint:'留意本空需要「建議」這件事，還是「提出建議」這個動作。',notes:['advice 是不可數名詞，常說 some advice、a piece of advice；advise 是動詞，常說 advise someone to do something。']},
+    {terms:['borrow','lend'],definitions:{borrow:['verb','借入；向別人借'],lend:['verb','借出；把東西借給別人']},hint:'留意借東西的方向：是向別人借，還是把東西借給別人。',notes:['borrow 著重借入，常見 borrow something from someone；lend 著重借出，常見 lend something to someone 或 lend someone something。']},
+    {terms:['rise','raise'],definitions:{rise:['verb','上升；增加（通常不及物）'],raise:['verb','提高；舉起；增加某物（通常及物）']},hint:'留意是主詞自己上升，還是主詞把另一個東西提高；後面有沒有受詞很關鍵。',notes:['rise 表示主詞本身上升或增加，例如 Prices rise；raise 表示提高某個對象，例如 raise prices。','動詞變化也不同：rise–rose–risen；raise–raised–raised。']},
+    {terms:['job','work'],definitions:{job:['noun','一份工作；一項任務（可數）'],work:['noun','工作；勞動（此義通常不可數）']},hint:'留意可數性，以及本句是在說一份職位、任務，還是一般工作。',notes:['job 通常可數，可說 a job、two jobs；work 表示一般工作時通常不可數，常說 some work、a lot of work。','work 也可作動詞，或在其他義項作可數名詞，例如 works of art；仍要配合本句意思。']},
+    {terms:['cost','spend','pay'],definitions:{cost:['verb','花費；使付出代價'],spend:['verb','花費金錢或時間'],pay:['verb','付款；支付']},hint:'留意主詞是人還是物，以及後面的介系詞、時間或金額搭配。',notes:['常見句型：物品 cost 人 + 金額；人 spend 金錢 on 某物，或 spend 時間 doing something。','pay 常用 pay for 某物、pay someone、pay an amount；不能只因三個字都和錢有關就直接替換。']},
+    {terms:['hard','hardly'],definitions:{hard:['adv','努力地；猛烈地（也可作形容詞）'],hardly:['adv','幾乎不']},hint:'留意副詞是否讓句子帶有「幾乎不」的意思。',notes:['hard 作副詞可表示「努力地」，例如 work hard；hardly 表示「幾乎不」，例如 hardly work。','加上 -ly 在這組字裡會改變意思，並非只是把形容詞換成一般副詞。']},
+    {terms:['late','lately'],definitions:{late:['adv','遲；晚（也可作形容詞）'],lately:['adv','最近；近來']},hint:'留意本句是說「遲到、很晚」，還是說「最近這段時間」。',notes:['late 常表示晚或遲，例如 arrive late；lately 表示最近，例如 I have been busy lately。']},
+    {terms:['fun','funny'],definitions:{fun:['noun','樂趣；也可形容好玩的'],funny:['adj','好笑的；滑稽的；有時指古怪的']},hint:'留意是「好玩、有樂趣」，還是「讓人發笑／古怪」。',notes:['fun 著重有趣、好玩的體驗；funny 常指好笑或古怪。a fun trip 和 a funny story 強調的重點不同。']},
+    {terms:['ensure','assure','insure'],definitions:{ensure:['verb','確保某事發生或成立'],assure:['verb','向某人保證；使人放心'],insure:['verb','投保；承保']},hint:'留意是確保事情、向某人保證，還是在談保險。',notes:['常見搭配：ensure that ...；assure someone that ...；insure a car。','ensure 和 insure 在部分英語用法中會有重疊；此題仍以原句、詞義與搭配為準。']},
+    {terms:['say','tell'],definitions:{say:['verb','說；表達內容'],tell:['verb','告訴某人；講述']},hint:'留意後面是說話內容、聽話的人，還是固定搭配。',notes:['say 著重說出的內容，可用 say something to someone；tell 常直接接人，例如 tell someone something。','固定搭配也不同，例如 tell a story、tell the truth、say hello。']}
+  ];
+  function clozeFeedback(question,input,lexicon=[],reveal=false){
+    const text=String(input||'').trim(),submitted=norm(text),sense=question.sense||{},target=norm(sense.term||question.word?.word||question.answer),targetPOS=normalizePOS(sense.pos||'');
+    const kind=evaluateCloze(question,text).kind,found=[];
+    for(const word of lexicon){
+      for(const s of word.senses||[]){
+        const exact=norm(word.word)===submitted||norm(s.term)===submitted;
+        if(!exact&&!(s.forms||[]).some(f=>norm(f)===submitted))continue;
+        const row={term:s.term||word.word,pos:normalizePOS(s.pos||''),zh:s.zh||'',example:s.examples?.[0]||null,exact};
+        if(!found.some(x=>x.term===row.term&&x.pos===row.pos&&x.zh===row.zh))found.push(row);
+      }
+    }
+    found.sort((a,b)=>Number(b.exact)-Number(a.exact)||Number(b.pos===targetPOS)-Number(a.pos===targetPOS));
+    const profile=usageComparisons.find(p=>p.terms.includes(target)&&p.definitions[target]?.[0]===targetPOS&&p.terms.some(t=>t!==target&&(t===submitted||found.some(e=>norm(e.term)===t))));
+    const inputBase=profile?.terms.find(t=>t!==target&&(t===submitted||found.some(e=>norm(e.term)===t)))||found[0]?.term||submitted;
+    const definition=profile?.definitions[inputBase];
+    const entries=definition?[{term:inputBase,pos:definition[0],zh:definition[1],example:found.find(e=>norm(e.term)===inputBase)?.example||null}]:found.slice(0,3);
+    const posLabel=feedbackPOS[targetPOS]||sense.pos||'符合句意的詞性';
+    let hint;
+    if(kind==='verb-form'){
+      const before=norm(String(question.text||'').split('________')[0]);
+      hint='你用的是同一個動詞的另一種字形，請檢査句子的時態與前後助動詞。';
+      if(/\b(?:can|could|may|might|must|should|will|would)(?:\s+not)?\s*$/.test(before))hint='空格前有情態助動詞，這個位置應使用動詞原形。';
+      else if(/\b(?:has|have|had)\s*$/.test(before))hint='空格前有完成式助動詞，請檢査是否需要過去分詞。';
+      else if(/\b(?:yesterday|ago|last week|last year|last month)\b/i.test(question.original||''))hint='句中有過去時間的線索，請檢査動詞變化，而不只是字典原形。';
+    }else if(kind==='word-family'){
+      hint=profile?.hint||`字根方向接近，但詞形或用法不同；本空需要${posLabel}，對應「${sense.zh||'題目的中文提示'}」。`;
+    }else if(kind==='word-form')hint=`意思方向接近，請檢査${targetPOS==='noun'?'名詞的單複數或字形':'詞形'}；本題需要${posLabel}。`;
+    else if(kind==='spelling')hint='拼字接近原句用字，請檢査是否漏字、多字或字母順序顛倒。';
+    else if(profile)hint=profile.hint;
+    else if(kind==='synonym')hint='你填的字有近義用法，但搭配與語氣可能不同；也可能存在可接受的替換，本題先練習回想原句。';
+    else if(found.length){
+      const meanings=entries.map(e=>`${feedbackPOS[e.pos]||e.pos}「${e.zh}」`).join('／');
+      hint=`你填的字在字庫中常見用法是${meanings}；本空提示需要${posLabel}「${sense.zh||''}」，請對照句意。`;
+    }else hint='字庫暫時無法辨識這個答案，先檢査拼字，再對照中文意思與前後搭配。';
+    // Never expose the hidden word (including in bilingual dictionary text) during the retry.
+    const forbidden=[question.answer,target].filter(t=>norm(t)!==submitted&&String(t).length>0);
+    const redact=value=>forbidden.reduce((out,term)=>out.replace(new RegExp('(?<![A-Za-z])'+escapeRE(String(term))+'(?![A-Za-z])','gi'),'目標字'),String(value));
+    const result={kind,hint:redact(hint),input:{text,entries:reveal?entries:[]},expected:null,points:[],example:null,recognized:found.length>0||!!definition};
+    if(!reveal)return result;
+    result.expected={text:question.answer,term:sense.term||question.word?.word||question.answer,pos:targetPOS,zh:sense.zh||''};
+    if(kind==='verb-form')result.points.push(`兩者是同一個動詞的不同字形。原句使用 ${question.answer}，你填的是 ${text}；要配合本句的時態或助動詞。`);
+    else if(kind==='word-form')result.points.push(`兩者屬於同一個字的不同形式，請特別比較單複數、比較級或句中需要的字形；原句使用 ${question.answer}。`);
+    if(profile)result.points.push(...profile.notes);
+    else if(kind==='synonym')result.points.push('你的字與目標義項有近義關係，但近義字可能在語氣、搭配或適用對象上不同。系統只核對原句答案，不能據此斷言所有替換都不合文法。');
+    else if(kind==='spelling')result.points.push('這次的差異主要被辨識為拼字接近；如果你填的拼法本身也是一個字，仍需對照上方的字義，不能只看字母相似。');
+    else if(!profile&&found.length&&kind!=='verb-form'&&kind!=='word-form')result.points.push(`原句在這裡表達「${sense.zh||''}」。上方列的是你填的字在字庫中的常見意思，不表示已確定你想表達的是其中哪一義。`);
+    if(!result.recognized)result.points.push('字庫找不到這個輸入的可靠釋義，無法確認它是另一個單字還是拼字錯誤；這裡不硬編詞義差別。');
+    const sample=profile?.examples?.[inputBase];
+    if(sample)result.example={en:sample[0],zh:sample[1],source:'Lilivm 用法比較補寫'};
+    else result.example=entries[0]?.example||null;
+    return result;
   }
   // Curated near-synonyms are gated by the meaning being studied.
   // They are learning comparisons, not unconditional sentence substitutions.
@@ -274,7 +353,7 @@
     }
     return [...defaults].sort((a,b)=>(counts.get(b)?.count||0)-(counts.get(a)?.count||0)||(counts.get(b)?.last||0)-(counts.get(a)?.last||0)||defaults.indexOf(a)-defaults.indexOf(b)).slice(0,4);
   }
-  const api={DAY,intervals,norm,dateKey,empty,fresh,unitKey,getProgress,schedule,rate,wordState,allWords,lookup,validSense,validWord,validState,validLegacy,importLegacy,mergeBackup,notebooks,makeCloze,evaluateCloze,normalizePOS,synonymData,relatedWords,questions,dueUnits,newUnits,dedupLogs,recentShortcuts};
+  const api={DAY,intervals,norm,dateKey,empty,fresh,unitKey,getProgress,schedule,rate,wordState,allWords,lookup,validSense,validWord,validNote,validState,validLegacy,importLegacy,mergeBackup,notebooks,makeCloze,evaluateCloze,clozeFeedback,normalizePOS,synonymData,relatedWords,questions,dueUnits,newUnits,dedupLogs,recentShortcuts};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.WGCore=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

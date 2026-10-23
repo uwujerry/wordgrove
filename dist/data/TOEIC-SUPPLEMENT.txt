@@ -1,0 +1,46 @@
+afterward|adv|之後；後來|We attended the meeting and had lunch afterward.|我們參加會議後一起吃了午餐。|Please read the report and call me afterward.|請先閱讀報告，之後打電話給我。
+attendee|noun|出席者；與會者|Each attendee received a conference badge.|每位與會者都領到一張會議識別證。|The organizer sent directions to all attendees.|主辦單位把交通指引寄給所有出席者。
+businessperson|noun|商人；商界人士|A successful businessperson listens to customers.|成功的商人會傾聽顧客的意見。|The workshop is open to every local businessperson.|這場工作坊開放給每位當地商界人士參加。
+by-law|noun|地方自治法規；組織章程|The new by-law limits overnight parking.|新的地方規定限制夜間停車。|Members voted to change a by-law of the association.|會員投票修改協會的一項章程。
+caterer|noun|宴會餐飲承辦商|The caterer will deliver lunch at noon.|餐飲承辦商會在中午送達午餐。|We asked the caterer to provide vegetarian meals.|我們請餐飲承辦商提供素食餐點。
+copier|noun|影印機|The copier is out of paper.|影印機沒有紙了。|Please use the copier near the reception desk.|請使用接待櫃檯附近的影印機。
+cordless|adj|無線的；不需電線連接的|The office purchased a cordless phone.|辦公室買了一支無線電話。|This cordless drill comes with two batteries.|這支無線電鑽附有兩顆電池。
+devastate|verb|嚴重破壞；使極度難過|The storm devastated several coastal towns.|暴風雨重創了幾個沿海城鎮。|The sudden factory closure devastated the community.|工廠突然關閉，對當地社區造成沉重打擊。
+dissatisfy|verb|使不滿意|Poor service can dissatisfy customers.|不良的服務會使顧客不滿意。|The limited choices may dissatisfy some guests.|選擇有限可能讓部分客人不滿意。
+distractor|noun|干擾選項；分散注意力的事物|One distractor looks correct but does not fit the sentence.|其中一個干擾選項看似正確，卻不符合句意。|The teacher explained why each distractor was wrong.|老師解釋了每個干擾選項錯在哪裡。
+donut|noun|甜甜圈|She bought a donut on her way to work.|她上班途中買了一個甜甜圈。|The bakery sells fresh donuts every morning.|這家麵包店每天早上販售新鮮甜甜圈。
+downsize|verb|縮減規模；裁員|The company plans to downsize its regional office.|公司打算縮減區域辦公室的規模。|Several departments were downsized after the merger.|合併後，有幾個部門縮減了人力。
+economize|verb|節省；節約開支|We need to economize on office supplies.|我們需要節省辦公用品的開支。|The hotel is trying to economize without reducing service quality.|飯店正設法節省開支，同時維持服務品質。
+entrée|noun|主菜（美式用法）|Each entrée comes with a side salad.|每份主菜都附一份配菜沙拉。|Please choose an entrée from the dinner menu.|請從晚餐菜單中選一道主菜。
+flextime|noun|彈性工時制度|Our company offers flextime to full-time employees.|我們公司提供全職員工彈性工時制度。|Flextime allows her to start work earlier.|彈性工時讓她可以提早開始工作。
+fundraise|verb|募款|The volunteers fundraise for a local hospital.|志工為當地一間醫院募款。|We plan to fundraise through a charity concert.|我們打算透過慈善音樂會募款。
+healthcare|noun|醫療保健|The company provides healthcare benefits to its staff.|公司提供員工醫療保健福利。|Demand for healthcare services continues to grow.|醫療保健服務的需求持續增加。
+housekeep|verb|料理家務；負責家務工作|She housekeeps for an elderly couple.|她為一對年長夫婦料理家務。|They hired someone to housekeep while they were away.|他們雇人在外出期間料理家務。
+ice cream|noun|冰淇淋|The café serves homemade ice cream.|這間咖啡店供應自製冰淇淋。|Would you like ice cream with your dessert?|你的甜點要搭配冰淇淋嗎？
+letterhead|noun|印有機構名稱與地址的信紙；信頭|Please print the offer on company letterhead.|請把聘用通知印在公司信紙上。|The letterhead includes our new office address.|信頭印有我們新的辦公室地址。
+misidentify|verb|錯認；辨識錯誤|The witness misidentified the delivery driver.|目擊者錯認了送貨司機。|A damaged label can cause staff to misidentify a package.|損壞的標籤可能導致員工認錯包裹。
+misplace|verb|把物品放錯地方；一時找不到|I misplaced the receipt for my train ticket.|我把火車票的收據放錯地方，一時找不到。|Please contact reception if you misplace your room key.|如果你找不到房間鑰匙，請聯絡櫃檯。
+newsstand|noun|報攤；報刊販售處|You can buy a newspaper at the station newsstand.|你可以在車站的報攤買報紙。|The newsstand also sells maps and snacks.|這個報攤也販售地圖和零食。
+obligate|verb|使負有義務；使有責任|The contract obligates us to finish by Friday.|合約規定我們有義務在星期五前完成。|Signing the form does not obligate you to buy anything.|簽署表格不代表你有義務購買任何東西。
+overcharge|verb|多收費；收費過高|The restaurant accidentally overcharged us.|餐廳不小心向我們多收了錢。|Please let us know if you think you were overcharged.|如果你認為被多收費，請告訴我們。
+overcrowd|verb|使過度擁擠|Too many visitors can overcrowd the small gallery.|過多遊客會讓這間小藝廊過度擁擠。|The waiting room was overcrowded during the morning rush.|早晨尖峰時段，候診室擠滿了人。
+overpay|verb|付錢過多；多付|We overpaid the supplier by fifty dollars.|我們多付了供應商五十元。|Check the invoice carefully so that you do not overpay.|仔細核對發票，以免多付錢。
+personalize|verb|使個人化；依個人需求訂製|You can personalize the notebook with your name.|你可以在筆記本上加上姓名，使它更個人化。|The service lets customers personalize their orders.|這項服務讓顧客可以依需求訂製訂單。
+photocopier|noun|影印機|The photocopier needs a new toner cartridge.|這台影印機需要更換碳粉匣。|A technician will repair the photocopier this afternoon.|技術人員今天下午會來修理影印機。
+photocopy|verb|影印|Please photocopy these documents before the meeting.|請在會議前影印這些文件。|She photocopied the signed contract for her records.|她影印了簽署後的合約以供留存。
+proofread|verb|校對|Please proofread the brochure before printing it.|請在印製前校對這份手冊。|He proofread the report to check for spelling mistakes.|他校對了報告，檢査是否有拼字錯誤。
+purser|noun|船舶或客機上負責旅客服務與事務的主管|The purser helped the passenger locate a missing bag.|事務長協助旅客尋找遺失的行李。|Please ask the purser about the ship's schedule.|關於船舶的行程，請詢問事務長。
+recur|verb|再次發生；反覆出現|Contact technical support if the problem recurs.|如果問題再次發生，請聯絡技術支援。|The same error has recurred several times this week.|這個錯誤本週已反覆出現好幾次。
+redecorate|verb|重新裝潢；重新布置|The hotel will redecorate its lobby next month.|飯店下個月將重新裝潢大廳。|We redecorated the meeting room in lighter colors.|我們用較淺的色彩重新布置會議室。
+repairperson|noun|維修人員|The repairperson will arrive before noon.|維修人員會在中午前抵達。|We called a repairperson to fix the broken refrigerator.|我們請維修人員來修理壞掉的冰箱。
+restatement|noun|重述；換句話說|The summary is a brief restatement of the main points.|這份摘要是對重點的簡短重述。|The manager asked for a clearer restatement of the proposal.|經理要求把提案重述得更清楚。
+sightsee|verb|觀光；遊覽|We will sightsee before the conference begins.|我們會在會議開始前去觀光。|They spent the afternoon sightseeing in the old town.|他們花了一個下午在舊城區觀光。
+stapler|noun|釘書機|May I borrow your stapler?|我可以借用你的釘書機嗎？|There is a stapler in the top drawer.|最上面的抽屜裡有一支釘書機。
+stockholder|noun|股東|Each stockholder received a copy of the annual report.|每位股東都收到一份年度報告。|Stockholders will vote on the merger next week.|股東下週將就合併案進行投票。
+storeroom|noun|儲藏室；庫房|Extra chairs are kept in the storeroom.|備用椅子放在儲藏室裡。|Please return unused supplies to the storeroom.|請把未使用的用品放回庫房。
+tablecloth|noun|桌布|The server replaced the stained tablecloth.|服務生換掉了有污漬的桌布。|Each table had a clean white tablecloth.|每張桌子都鋪著乾淨的白色桌布。
+toiletry|noun|個人盥洗用品（常用複數）|The hotel provides basic toiletries.|飯店提供基本的盥洗用品。|Please pack your toiletries in a small bag.|請把盥洗用品裝進小袋子裡。
+vend|verb|販賣|The machines vend snacks and cold drinks.|這些機器販售零食和冷飲。|Local vendors vend fresh fruit near the station.|當地攤販在車站附近販賣新鮮水果。
+videoconference|noun|視訊會議|We held a videoconference with the overseas team.|我們和海外團隊開了一場視訊會議。|The videoconference will begin at nine.|視訊會議將在九點開始。
+webpage|noun|網頁|The webpage contains information about the event.|這個網頁包含活動資訊。|Please visit our webpage to download the application form.|請到我們的網頁下載申請表。
+wristwatch|noun|腕錶；手錶|He checked his wristwatch before boarding the train.|他上火車前看了一下手錶。|A wristwatch was found in the meeting room.|有人在會議室發現一支手錶。

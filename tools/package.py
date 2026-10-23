@@ -18,7 +18,7 @@ for css_name in ['style.css','features.css']:
         return 'url("data:'+mime+';base64,'+base64.b64encode(asset.read_bytes()).decode('ascii')+'")'
     css=re.sub(r'url\("(\.?/?[^":]+\.(?:TTF|ttf|woff2))"\)',embed_font,css)
     html=html.replace(f'<link rel="stylesheet" href="{css_name}">','<style>'+css+'</style>')
-for script in ['catalog.js','relations.js','model.js','app.js']:
+for script in ['catalog.js','toeic.js','relations.js','model.js','app.js']:
     code=(dist/script).read_text(encoding='utf-8')
     # Keep source code inside one script element even if content contains HTML.
     code=re.sub(r'</script',r'<\/script',code,flags=re.IGNORECASE)
@@ -33,7 +33,7 @@ out=ROOT.parent
 entry=out.parent/'index.html'
 linked=(dist/'index.html').read_text(encoding='utf-8')
 prefix=ROOT.relative_to(entry.parent).as_posix()+'/'
-for name in ['style.css','features.css','catalog.js','relations.js','model.js','app.js','night-mode-icon.png','lily-icon.svg','rope-character.png']:
+for name in ['style.css','features.css','catalog.js','toeic.js','relations.js','model.js','app.js','night-mode-icon.png','lily-icon.svg','rope-character.png']:
     linked=linked.replace('href="'+name+'"','href="'+prefix+name+'"').replace('src="'+name+'"','src="'+prefix+name+'"')
 entry.write_text(linked,encoding='utf-8')
 with zipfile.ZipFile(out/'Wordgrove-source.zip','w',zipfile.ZIP_DEFLATED) as z:

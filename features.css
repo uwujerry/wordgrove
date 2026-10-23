@@ -278,3 +278,49 @@ body[data-studying="true"] .back-to-top{display:none}
 .notification-settings .hint{margin:14px 0 0}
 html[data-theme="dark"] .review-reminder{background:#21342f;color:#e0ebe5;border-color:#537064}
 @media(max-width:720px){.review-reminder{bottom:16px;max-width:calc(100% - 32px);width:max-content;gap:12px;padding:12px;font-size:13.44px}.review-reminder .secondary{padding:9px;font-size:12.32px}}
+
+/* Private notes. */
+.notes-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px}
+.notes-index{align-self:start;padding:18px;max-height:700px;overflow:auto}.notes-index input{width:100%;font-size:15.68px}
+.note-item{display:block;text-align:left;width:100%;padding:16px 12px;border-radius:8px;margin-top:8px;overflow-wrap:anywhere}.note-item.selected{background:#edf3ee}.note-item strong{display:block;font-size:17.92px}.note-item small{display:block;font-size:13.44px;line-height:1.7;color:var(--muted);margin-top:6px;white-space:pre-wrap}
+.note-editor input,.note-editor textarea{width:100%;font-size:17.92px}.note-editor textarea{min-height:360px;line-height:1.9;resize:vertical}.note-editor label{font-size:14.56px}.note-editor .hint{display:block;margin-top:16px}
+html[data-theme="dark"] .note-item.selected{background:#30473c}
+@media(max-width:900px){.notes-layout{grid-template-columns:210px minmax(0,1fr)}}
+@media(max-width:720px){.notes-layout{grid-template-columns:1fr}.notes-index{max-height:240px}.note-editor textarea{min-height:280px}.notes-layout .panel{padding:18px}}
+
+/* Answer feedback uses one reading column and aligned dictionary rows. */
+.answer-feedback>strong{display:block;line-height:1.7;margin-bottom:12px}
+.answer-feedback>p{font-size:18px;line-height:1.8;margin:10px 0}
+.answer-feedback>p[lang="en"]{font-size:23px;margin-top:20px}
+.answer-feedback>small{display:block;line-height:1.8;margin-top:4px}
+.answer-feedback>button[data-action="speak"]{display:block;margin:8px 0 0;padding-left:0}
+.cloze-comparison{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.cloze-comparison h3{font-size:18px;line-height:1.6;margin:0 0 12px}
+.cloze-comparison .answer-comparison-list{list-style:disc;padding-left:20px;margin:0}
+.answer-comparison-list>li{padding:12px 0 16px}
+.answer-comparison-list>li+li{border-top:1px solid var(--line)}
+.comparison-entry-head{display:grid;grid-template-columns:90px minmax(0,1fr);gap:12px;align-items:baseline}
+.comparison-label{font-size:14px;line-height:1.7;opacity:.8}
+.comparison-word{font-size:30px;line-height:1.4;overflow-wrap:anywhere}
+.comparison-definitions{margin:6px 0 0 102px}
+.cloze-comparison .comparison-meaning{display:flex;align-items:baseline;gap:10px;font-size:17px;line-height:1.8;margin:4px 0}
+.comparison-pos{flex:none;min-width:52px;font-size:22px;line-height:1.6;opacity:1}
+.cloze-comparison .comparison-unknown{font-size:15px;line-height:1.8;margin:4px 0;opacity:.8}
+.cloze-comparison h4{font-size:16px;line-height:1.7;margin:22px 0 8px}
+.cloze-comparison .comparison-points{padding-left:20px;margin:0 0 18px}
+.comparison-points li{font-size:16px;line-height:1.9;margin:8px 0;overflow-wrap:anywhere}
+.cloze-comparison details{border-top:1px solid var(--line);padding-top:14px}
+.cloze-comparison summary{font-size:15px;line-height:1.8}
+.cloze-comparison details p{font-size:17px;line-height:1.8;margin:10px 0}
+@media(max-width:520px){.comparison-entry-head{grid-template-columns:74px minmax(0,1fr);gap:8px}.comparison-definitions{margin-left:0;margin-top:10px}.comparison-word{font-size:28px}.answer-feedback{padding:16px}}
+
+/* Keep part-of-speech labels legible in questions and dictionary details. */
+.sense-pos{font-size:22px;line-height:1.6}
+
+/* Emphasize the English answer without enlarging its Chinese label. */
+.answer-feedback>p>span[lang="en"]{font-size:30px;line-height:1.5;overflow-wrap:anywhere}
+
+/* Place the part of speech beside the meaning and revealed English answer. */
+.quiz-card .quiz-meaning{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px}
+.quiz-meaning .sense-pos{flex:none}
+.answer-feedback>.original-answer>.answer-pos{display:inline-block;font-size:22px;line-height:1.5;margin-left:8px;color:inherit;opacity:.85}
