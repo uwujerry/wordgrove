@@ -324,3 +324,8 @@ html[data-theme="dark"] .note-item.selected{background:#30473c}
 .quiz-card .quiz-meaning{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 14px}
 .quiz-meaning .sense-pos{flex:none}
 .answer-feedback>.original-answer>.answer-pos{display:inline-block;font-size:22px;line-height:1.5;margin-left:8px;color:inherit;opacity:.85}
+
+.cloze-review-option{display:flex;justify-content:center;align-items:center;gap:10px;font-size:17px;line-height:1.7;margin:20px 0}
+.cloze-review-option input{width:20px;height:20px;accent-color:#537b61;flex:none}
+.comparison-word .input-pos{font-size:20px;line-height:1.6;color:inherit;opacity:.85}
+.retry-feedback .input-pos-note,.cloze-comparison .input-pos-note{font-size:16px;line-height:1.8;margin:14px 0}

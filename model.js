@@ -204,17 +204,24 @@
     {terms:['ensure','assure','insure'],definitions:{ensure:['verb','確保某事發生或成立'],assure:['verb','向某人保證；使人放心'],insure:['verb','投保；承保']},hint:'留意是確保事情、向某人保證，還是在談保險。',notes:['常見搭配：ensure that ...；assure someone that ...；insure a car。','ensure 和 insure 在部分英語用法中會有重疊；此題仍以原句、詞義與搭配為準。']},
     {terms:['say','tell'],definitions:{say:['verb','說；表達內容'],tell:['verb','告訴某人；講述']},hint:'留意後面是說話內容、聽話的人，還是固定搭配。',notes:['say 著重說出的內容，可用 say something to someone；tell 常直接接人，例如 tell someone something。','固定搭配也不同，例如 tell a story、tell the truth、say hello。']}
   ];
+  // Dictionary-supported parts of speech, including recorded inflections; never guess from suffixes alone.
+  function analyzeInputPOS(input,lexicon=[]){
+    const submitted=norm(input),entries=[];
+    if(!submitted||submitted==='-')return {recognized:false,positions:[],ambiguous:false,entries};
+    for(const word of lexicon)for(const sense of word.senses||[]){
+      const term=sense.term||word.word,exact=norm(term)===submitted;
+      const forms=sense.forms||((norm(term)===norm(word.word))?word.forms:[])||[];
+      if(!exact&&!forms.some(form=>norm(form)===submitted&&norm(form)!=='-'))continue;
+      const row={term,pos:normalizePOS(sense.pos||''),zh:sense.zh||'',example:sense.examples?.[0]||null,exact};
+      if(!entries.some(e=>e.term===row.term&&e.pos===row.pos&&e.zh===row.zh))entries.push(row);
+    }
+    entries.sort((a,b)=>Number(b.exact)-Number(a.exact));
+    const positions=[...new Set(entries.map(e=>e.pos).filter(Boolean))];
+    return {recognized:entries.length>0,positions,ambiguous:positions.length>1,entries};
+  }
   function clozeFeedback(question,input,lexicon=[],reveal=false){
     const text=String(input||'').trim(),submitted=norm(text),sense=question.sense||{},target=norm(sense.term||question.word?.word||question.answer),targetPOS=normalizePOS(sense.pos||'');
-    const kind=evaluateCloze(question,text).kind,found=[];
-    for(const word of lexicon){
-      for(const s of word.senses||[]){
-        const exact=norm(word.word)===submitted||norm(s.term)===submitted;
-        if(!exact&&!(s.forms||[]).some(f=>norm(f)===submitted))continue;
-        const row={term:s.term||word.word,pos:normalizePOS(s.pos||''),zh:s.zh||'',example:s.examples?.[0]||null,exact};
-        if(!found.some(x=>x.term===row.term&&x.pos===row.pos&&x.zh===row.zh))found.push(row);
-      }
-    }
+    const kind=evaluateCloze(question,text).kind,analysis=analyzeInputPOS(text,lexicon),found=[...analysis.entries];
     found.sort((a,b)=>Number(b.exact)-Number(a.exact)||Number(b.pos===targetPOS)-Number(a.pos===targetPOS));
     const profile=usageComparisons.find(p=>p.terms.includes(target)&&p.definitions[target]?.[0]===targetPOS&&p.terms.some(t=>t!==target&&(t===submitted||found.some(e=>norm(e.term)===t))));
     const inputBase=profile?.terms.find(t=>t!==target&&(t===submitted||found.some(e=>norm(e.term)===t)))||found[0]?.term||submitted;
@@ -241,7 +248,12 @@
     // Never expose the hidden word (including in bilingual dictionary text) during the retry.
     const forbidden=[question.answer,target].filter(t=>norm(t)!==submitted&&String(t).length>0);
     const redact=value=>forbidden.reduce((out,term)=>out.replace(new RegExp('(?<![A-Za-z])'+escapeRE(String(term))+'(?![A-Za-z])','gi'),'目標字'),String(value));
-    const result={kind,hint:redact(hint),input:{text,entries:reveal?entries:[]},expected:null,points:[],example:null,recognized:found.length>0||!!definition};
+    const result={kind,hint:redact(hint),input:{text,entries:reveal?entries:[],positions:analysis.positions,ambiguous:analysis.ambiguous},expected:null,points:[],example:null,recognized:found.length>0||!!definition};
+    if(analysis.positions.length){
+      const labels=analysis.positions.map(p=>feedbackPOS[p]||p).join('、');
+      const posHint=analysis.ambiguous?`你填的字在字庫中可作${labels}，需依句意判斷；本題需要${posLabel}。`:`你填的字在字庫中作${labels}；本題需要${posLabel}。`;
+      result.posHint=redact(posHint);
+    }else result.posHint='字庫尚無這個輸入的可靠詞性，無法直接判定。';
     if(!reveal)return result;
     result.expected={text:question.answer,term:sense.term||question.word?.word||question.answer,pos:targetPOS,zh:sense.zh||''};
     if(kind==='verb-form')result.points.push(`兩者是同一個動詞的不同字形。原句使用 ${question.answer}，你填的是 ${text}；要配合本句的時態或助動詞。`);
@@ -336,6 +348,25 @@
     }
     return {synonyms:synonyms.slice(0,limit),confusables:confusables.slice(0,limit)};
   }
+  function clozeWordKey(question){return norm(question.word?.word||question.sense?.term||question.wordId||question.word?.id||question.answer);}
+  function chooseClozeQuestions(pool,{limit=10,shuffle=true,previousKey=''}={}){
+    const copy=[...pool];
+    if(shuffle)for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}
+    const groups=new Map();
+    for(const question of copy){const key=clozeWordKey(question);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(question);}
+    const selected=[],used=new Set();let last=previousKey;
+    while(selected.length<limit&&groups.size){
+      const keys=[...groups.keys()],different=keys.filter(key=>key!==last);
+      const candidates=different.length?different:keys;
+      const unused=candidates.filter(key=>!used.has(key));
+      // Use distinct words when enough remain; otherwise spread frequent words out
+      // before scarce alternatives run out (A,A,A,B,C -> A,B,A,C,A).
+      const key=unused.length>=limit-selected.length?unused[0]:candidates.reduce((best,key)=>groups.get(key).length>groups.get(best).length?key:best,candidates[0]),group=groups.get(key);
+      selected.push(group.shift());used.add(key);last=key;
+      if(!group.length)groups.delete(key);
+    }
+    return selected;
+  }
   function questions(words){const pool=[];for(const w of words)for(const s of w.senses)for(const e of s.examples){const q=makeCloze(w,s,e);if(q)pool.push({...q,sense:s,word:w});}return pool;}
   function dueUnits(state,words,now=Date.now()){const units=[];for(const w of words)for(const s of w.senses){const p=getProgress(state,w.id,s.id);if(p.stage>=0&&p.due<=now)units.push({word:w,sense:s,due:p.due});}return units.sort((a,b)=>a.due-b.due);}
   function newUnits(state,words,limit=10){
@@ -353,7 +384,7 @@
     }
     return [...defaults].sort((a,b)=>(counts.get(b)?.count||0)-(counts.get(a)?.count||0)||(counts.get(b)?.last||0)-(counts.get(a)?.last||0)||defaults.indexOf(a)-defaults.indexOf(b)).slice(0,4);
   }
-  const api={DAY,intervals,norm,dateKey,empty,fresh,unitKey,getProgress,schedule,rate,wordState,allWords,lookup,validSense,validWord,validNote,validState,validLegacy,importLegacy,mergeBackup,notebooks,makeCloze,evaluateCloze,clozeFeedback,normalizePOS,synonymData,relatedWords,questions,dueUnits,newUnits,dedupLogs,recentShortcuts};
+  const api={DAY,intervals,norm,dateKey,empty,fresh,unitKey,getProgress,schedule,rate,wordState,allWords,lookup,validSense,validWord,validNote,validState,validLegacy,importLegacy,mergeBackup,notebooks,makeCloze,evaluateCloze,clozeFeedback,analyzeInputPOS,normalizePOS,synonymData,relatedWords,questions,clozeWordKey,chooseClozeQuestions,dueUnits,newUnits,dedupLogs,recentShortcuts};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
   root.WGCore=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
